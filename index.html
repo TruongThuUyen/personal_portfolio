@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal portfolio</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <body>
+    <div class="wrapper lg:flex">
+      <!-- Mobile menu -->
+      <div class="mobile-menu fixed top-0 left-0 right-0">
+        <div
+          class="mobile-nav relative flex lg:hidden h-[var(--mobile-height)] bg-white border-b-[1px] border-black/10">
+          <div
+            class="mobile-nav__data z-[99999] flex justify-between items-center w-full h-[inherit] px-4">
+            <a href="#">
+              <img
+                class="w-[54px] mx-auto fill-white hover:cursor-pointer"
+                src="../assets//icons/logo.svg"
+                alt="Logo" />
+            </a>
+            <div class="mobile-nav__toggle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="mobile-nav__burger">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="mobile-nav__close">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>
+            </div>
+          </div>
+          <div class="dropdown absolute w-full top-[var(--mobile-height)] bg-white">
+            <ul class="dropdown__list py-3">
+              <li>
+                <a href="#" class="dropdown__link"> Home </a>
+              </li>
+              <li>
+                <a href="#about" class="dropdown__link"> About </a>
+              </li>
+              <li>
+                <a href="#skills" class="dropdown__link"> Skills </a>
+              </li>
+              <li></li>
+              <li>
+                <a href="#portfolio" class="dropdown__link"> Portfolio </a>
+              </li>
+              <li>
+                <a href="#award" class="dropdown__link"> Awards </a>
+              </li>
+              <li>
+                <a href="#contact" class="dropdown__link"> Contact </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div
+        id="sidebar"
+        class="hidden lg:flex flex-col w-[var(--sidebar-width)] bg-[var(--primary-color)]">
+        <header class="sidebar__header h-[120px] relative bg-[var(--secondary-color)]">
+          <a href="#" class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
+            <img
+              class="w-[64px] mx-auto fill-white hover:cursor-pointer"
+              src="../assets//icons/logo.svg"
+              alt="Logo" />
+          </a>
+          <button
+            id="btn-effect"
+            class="btn-effect w-[30px] h-[30px] flex absolute justify-center items-center right-[-14px] top-1/2 rounded-full -translate-y-1/2 bg-white cursor-pointer overflow-hidden transition-shadow duration-400 ease-out">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-5">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5 8.25 12l7.5-7.5" />
+            </svg>
+          </button>
+        </header>
+
+        <ul class="nav__list h-full flex flex-col items-center justify-center">
+          <li class="nav__item">
+            <a href="#" class="nav__link py-3 text-white"> Home </a>
+          </li>
+          <li>
+            <a href="#about" class="nav__link py-3 text-white"> About </a>
+          </li>
+          <li>
+            <a href="#skills" class="nav__link py-3 text-white"> Skills </a>
+          </li>
+          <li>
+            <a href="#experience" class="nav__link py-3 text-white"> Experience </a>
+          </li>
+          <li>
+            <a href="#portfolio" class="nav__link py-3 text-white"> Portfolio </a>
+          </li>
+          <li>
+            <a href="#award" class="nav__link py-3 text-white"> Awards </a>
+          </li>
+          <li>
+            <a href="#contact" class="nav__link py-3 text-white"> Contact </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Main content -->
+      <main id="mainpart" class="w-full h-[100vh] lg:pl-[var(--sidebar-width)]">
+        <section class="hero">
+          <h1>JAMES CAMERON</h1>
+          <p>UI/UX DESIGNER</p>
+          <button class="btn">CONTACT ME</button>
+        </section>
+
+        <section class="about">
+          <h2>About Me</h2>
+          <p>
+            I am a UI/UX designer with over 5 years of experience in creating stunning digital
+            experiences.
+          </p>
+        </section>
+
+        <section class="services">
+          <h2>My Services</h2>
+          <ul>
+            <li>UI/UX Design</li>
+            <li>Website Development</li>
+            <li>Branding & Identity</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
