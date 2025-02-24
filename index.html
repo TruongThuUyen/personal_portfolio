@@ -10,11 +10,11 @@
   <body>
     <div class="wrapper lg:flex">
       <!-- Mobile menu -->
-      <div class="mobile-menu fixed top-0 left-0 right-0">
+      <div class="mobile-menu fixed top-0 left-0 right-0 z-[9999]">
         <div
           class="mobile-nav relative flex lg:hidden h-[var(--mobile-height)] bg-white border-b-[1px] border-black/10">
           <div
-            class="mobile-nav__data z-[99999] flex justify-between items-center w-full h-[inherit] px-4">
+            class="mobile-nav__data z-[99] flex justify-between items-center w-full h-[inherit] px-4">
             <a href="#">
               <img
                 class="w-[54px] mx-auto fill-white hover:cursor-pointer"
@@ -102,36 +102,48 @@
 
         <ul class="nav__list h-full flex flex-col items-center justify-center">
           <li class="nav__item">
-            <a href="#" class="nav__link py-3 text-white"> Home </a>
+            <a href="#" class="nav__link"> Home </a>
           </li>
           <li>
-            <a href="#about" class="nav__link py-3 text-white"> About </a>
+            <a href="#about" class="nav__link"> About </a>
           </li>
           <li>
-            <a href="#skills" class="nav__link py-3 text-white"> Skills </a>
+            <a href="#skills" class="nav__link"> Skills </a>
           </li>
           <li>
-            <a href="#experience" class="nav__link py-3 text-white"> Experience </a>
+            <a href="#experience" class="nav__link"> Experience </a>
           </li>
           <li>
-            <a href="#portfolio" class="nav__link py-3 text-white"> Portfolio </a>
+            <a href="#portfolio" class="nav__link"> Portfolio </a>
           </li>
           <li>
-            <a href="#award" class="nav__link py-3 text-white"> Awards </a>
+            <a href="#award" class="nav__link"> Awards </a>
           </li>
           <li>
-            <a href="#contact" class="nav__link py-3 text-white"> Contact </a>
+            <a href="#contact" class="nav__link"> Contact </a>
           </li>
         </ul>
       </div>
 
       <!-- Main content -->
-      <main id="mainpart" class="w-full h-[100vh] lg:pl-[var(--sidebar-width)]">
-        <section class="hero">
-          <h1>JAMES CAMERON</h1>
-          <p>UI/UX DESIGNER</p>
-          <button class="btn">CONTACT ME</button>
-        </section>
+      <main
+        id="mainpart"
+        class="w-full lg:pl-[var(--sidebar-width)] pt-[var(--mobile-height)] lg:pt-0">
+        <div class="hero relative flex flex-col items-center justify-center h-[100vh]">
+          <div class="hero__image absolute"></div>
+          <div class="z-[10] text-white text-center">
+            <h3 class="text-[46px] font-bold font-poppins">DEVELOPER</h3>
+            <div class="hero__typewriter">
+              <div>
+                <p class="hero__des">FRONTEND DEVELOPER</p>
+              </div>
+            </div>
+            <button
+              class="hero__button my-3 py-[10px] px-4 bg-[var(--primary-color)] cursor-pointer">
+              CONTACT ME
+            </button>
+          </div>
+        </div>
 
         <section class="about">
           <h2>About Me</h2>
