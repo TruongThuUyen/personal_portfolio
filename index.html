@@ -7,9 +7,14 @@
     <link rel="stylesheet" href="./main.css" />
   </head>
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
   <body>
     <div class="wrapper lg:flex">
-      <!-- Mobile menu -->
+      <!-- MOBILE MENU -->
       <div class="mobile-menu fixed top-0 left-0 right-0 z-[9999]">
         <div
           class="mobile-nav relative flex lg:hidden h-[var(--mobile-height)] bg-white border-b-[1px] border-black/10">
@@ -70,8 +75,9 @@
           </div>
         </div>
       </div>
+      <!-- END MOBILE MENU -->
 
-      <!-- Sidebar -->
+      <!-- SIDEBAR -->
       <div
         id="sidebar"
         class="hidden lg:flex flex-col w-[var(--sidebar-width)] bg-[var(--primary-color)]">
@@ -124,44 +130,77 @@
           </li>
         </ul>
       </div>
+      <!-- END SIDEBAR -->
 
-      <!-- Main content -->
+      <!-- MAINPART -->
       <main
         id="mainpart"
         class="w-full lg:pl-[var(--sidebar-width)] pt-[var(--mobile-height)] lg:pt-0">
         <div class="hero relative flex flex-col items-center justify-center h-[100vh]">
           <div class="hero__image absolute"></div>
           <div class="z-[10] text-white text-center">
-            <h3 class="text-[46px] font-bold font-poppins">DEVELOPER</h3>
+            <h3 class="text-[36px] sm:text-[46px] font-bold font-poppins">WELCOME TO MY PAGE</h3>
             <div class="hero__typewriter">
               <div>
                 <p class="hero__des">FRONTEND DEVELOPER</p>
               </div>
             </div>
-            <button
-              class="hero__button my-3 py-[10px] px-4 bg-[var(--primary-color)] cursor-pointer">
-              CONTACT ME
+            <button class="btn-slide">
+              <a href="#contact"> CONTACT ME </a>
             </button>
           </div>
         </div>
 
-        <section class="about">
-          <h2>About Me</h2>
-          <p>
-            I am a UI/UX designer with over 5 years of experience in creating stunning digital
-            experiences.
-          </p>
+        <!-- ABOUT SECTION -->
+        <section id="about" class="spaced-section">
+          <div
+            class="flex flex-col lg:flex-row items-center gap-20 lg:max-w-[var(--section-width)] mx-auto">
+            <div class="w-full lg:w-[50%]">
+              <img
+                class="w-full h-[400px] object-cover"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS7UXQPsmEcEWZ59pRTP6kvTmuIJpRxzWYnyJxmQfgnM3owhqXYkwiBpQ&s"
+                alt="avatar" />
+            </div>
+            <div class="flex flex-col justify-around w-full lg:w-[50%] h-full">
+              <p class="section__title">About</p>
+              <p class="section__sub-title">Truong Thi Thu Uyen is a Front-end developer</p>
+              <p class="section__text">
+                Hi, I'm Thu Uyen! I am a Front-End Developer with 1 year of experience in building
+                interactive and responsive web applications. I currently live and work in Da Nang
+                City. Please see below for more details.
+              </p>
+              <a
+                href="https://www.topcv.vn/xem-cv/BwdTB1cDU1MDVFBdX11XDFcAAwYCBgIEBQQADwbce6"
+                target="_blank"
+                class="btn-slide max-w-[200px]"
+                >DOWNLOAD CV</a
+              >
+            </div>
+          </div>
         </section>
+        <!-- END ABOUT SECTION -->
 
-        <section class="services">
-          <h2>My Services</h2>
-          <ul>
-            <li>UI/UX Design</li>
-            <li>Website Development</li>
-            <li>Branding & Identity</li>
-          </ul>
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="spaced-section bg-[var(--background-gray)]">
+          <div class="mx-auto lg:max-w-[var(--section-width)]">
+            <p class="section__title">Skills</p>
+            <p class="section__sub-title">Skills</p>
+            <ul class="skills__list grid grid-cols-2 lg:grid-cols-4 gap-4">
+              <li class="skills__item">HTML</li>
+              <li class="skills__item">CSS / SCSS</li>
+              <li class="skills__item">Tailwind CSS</li>
+              <li class="skills__item">Javascript</li>
+              <li class="skills__item">ReactJS</li>
+              <li class="skills__item">VueJS</li>
+              <li class="skills__item">RESTFul APIs</li>
+              <li class="skills__item">Spring Boot</li>
+              <li class="skills__item">Git/GitHub</li>
+            </ul>
+          </div>
         </section>
+        <!-- END SKILLS SECTION -->
       </main>
+      <!-- END MAINPART -->
     </div>
     <script src="./js/script.js"></script>
   </body>
