@@ -4,14 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal portfolio</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="./main.css" />
   </head>
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
   <body>
     <div class="wrapper lg:flex">
       <!-- MOBILE MENU -->
@@ -53,7 +48,7 @@
           <div class="dropdown absolute w-full top-[var(--mobile-height)] bg-white">
             <ul class="dropdown__list py-3">
               <li>
-                <a href="#" class="dropdown__link"> Home </a>
+                <a href="#home" class="dropdown__link"> Home </a>
               </li>
               <li>
                 <a href="#about" class="dropdown__link"> About </a>
@@ -85,7 +80,7 @@
           <a href="#" class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
             <img
               class="w-[64px] mx-auto fill-white hover:cursor-pointer"
-              src="../assets//icons/logo.svg"
+              src="./assets/icons/logo.svg"
               alt="Logo" />
           </a>
           <button
@@ -108,7 +103,7 @@
 
         <ul class="nav__list h-full flex flex-col items-center justify-center">
           <li class="nav__item">
-            <a href="#" class="nav__link"> Home </a>
+            <a href="#home" class="nav__link"> Home </a>
           </li>
           <li>
             <a href="#about" class="nav__link"> About </a>
@@ -136,7 +131,9 @@
       <main
         id="mainpart"
         class="w-full lg:pl-[var(--sidebar-width)] pt-[var(--mobile-height)] lg:pt-0">
-        <div class="hero relative flex flex-col items-center justify-center h-[100vh]">
+        <section
+          id="home"
+          class="hero relative flex flex-col items-center justify-center h-[100vh]">
           <div class="hero__image absolute"></div>
           <div class="z-[10] text-white text-center">
             <h3 class="text-[36px] sm:text-[46px] font-bold font-poppins">WELCOME TO MY PAGE</h3>
@@ -149,7 +146,7 @@
               <a href="#contact"> CONTACT ME </a>
             </button>
           </div>
-        </div>
+        </section>
 
         <!-- ABOUT SECTION -->
         <section id="about" class="spaced-section">
@@ -158,7 +155,7 @@
             <div class="w-full lg:w-[50%]">
               <img
                 class="w-full h-[400px] object-cover"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS7UXQPsmEcEWZ59pRTP6kvTmuIJpRxzWYnyJxmQfgnM3owhqXYkwiBpQ&s"
+                src="./assets/images/avatar.jpg"
                 alt="avatar" />
             </div>
             <div class="flex flex-col justify-around w-full lg:w-[50%] h-full">
