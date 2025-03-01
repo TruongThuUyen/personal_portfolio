@@ -7,8 +7,8 @@ const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav__link');
 const dropdownList = document.querySelector('.dropdown__item');
 const dropdownLinks = document.querySelectorAll('.dropdown__link');
-
-console.log(dropdownList);
+const showTextArr = document.querySelectorAll('.show-text');
+// const experienceItems = document.querySelectorAll('.experience__item');
 
 // Click handler for smooth scrolling
 const handleSmoothScrolling = (arr) => {
@@ -84,3 +84,17 @@ dropdownLinks?.forEach((dropdownItem) => {
     toggleBtn.classList.remove('show-icon');
   });
 });
+
+// experienceItems.forEach((item) => {
+//   const showTextBtn = item.querySelector('.show-item');
+//   showTextBtn.addEventListener('click', () => {
+//     item.classList.toggle('show-all-item');
+//   });
+// });
+
+const showAllContent = (el) => {
+  const showTextBtn = el.querySelector('.show-item');
+  showTextBtn.addEventListener('click', () => {
+    el.classList.toggle('show-all-item');
+  });
+};
