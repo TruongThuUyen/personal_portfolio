@@ -5,18 +5,6 @@
   --mobile-height: 54px;
   --section-width: 1020px;
 
-  /* --primary-color: #003049;
-
-
-  --primary-color: #b68453;
-  --primary-color-hover: #9e6d3d;
-  --primary-color-light: #f6f5ff;
-  --secondary-color: #6d9773;
-  --secondary-color-hover: #597d5d; */
-
-  /* --primary-color: #edf7fa;
-  --secondary-color: #ff6464; */
-
   --primary-color: #1e3a8a;
   --secondary-color: #fad400;
   --primary-hover-dark: #152a68;
@@ -24,6 +12,7 @@
   --bright-red-orange: #fa4616;
   --gray-color: #767676;
   --blue-color: #2755d3;
+  --background-blue-light: #0058b519;
   --background-light: #f3f4f6;
   --background-gray: #f9f9f9;
   --light-gray-color: #ddd;
@@ -246,11 +235,11 @@ button {
 /* ------------ END HERO SECTION ------------ */
 
 /* ------------ SKILLS SECTION ------------ */
-.skills__item {
+/* .skills__item {
   padding: 20px 30px;
   background-color: rgba(0, 88, 181, 0.1);
   text-align: center;
-}
+} */
 
 .logo-company-wrapper {
   position: relative;

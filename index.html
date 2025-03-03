@@ -56,7 +56,9 @@
               <li>
                 <a href="#skills" class="dropdown__link"> Skills </a>
               </li>
-              <li></li>
+              <li>
+                <a href="#experience" class="dropdown__link"> Experiences </a>
+              </li>
               <li>
                 <a href="#portfolio" class="dropdown__link"> Portfolio </a>
               </li>
@@ -173,31 +175,42 @@
         <!-- END ABOUT SECTION -->
 
         <!-- SKILLS SECTION -->
-        <section id="skills" class="spaced-section bg-[var(--background-gray)]">
+        <section id="skills" class="relative spaced-section bg-[var(--background-gray)]">
           <div class="mx-auto lg:max-w-[var(--section-width)]">
             <p class="section__title">Skills</p>
             <p class="section__sub-title">Skills</p>
-            <ul class="skills__list grid grid-cols-2 lg:grid-cols-4 gap-4">
-              <li class="skills__item">HTML</li>
-              <li class="skills__item">CSS / SCSS</li>
-              <li class="skills__item">Tailwind CSS</li>
-              <li class="skills__item">Javascript</li>
-              <li class="skills__item">ReactJS</li>
-              <li class="skills__item">VueJS</li>
-              <li class="skills__item">RESTFul APIs</li>
-              <li class="skills__item">Spring Boot</li>
-              <li class="skills__item">Git/GitHub</li>
-            </ul>
+            <ul id="skills__list" class="grid grid-cols-2 lg:grid-cols-4 gap-6"></ul>
           </div>
-          <!-- Experiences section -->
-          <div class="mx-auto lg:max-w-[var(--section-width)] mt-20">
+
+          <!-- Split Design -->
+          <div class="absolute -bottom-12 left-1/2 transform -translate-x-1/2">
+            <div
+              class="w-px h-24 bg-gradient-to-b from-[var(--primary-color)] to-transparent"></div>
+            <div
+              class="w-3 h-3 rounded-full bg-[var(--primary-color)] absolute -bottom-1 left-1/2 transform -translate-x-1/2"></div>
+          </div>
+        </section>
+        <!-- END SKILLS SECTION -->
+
+        <!-- EXPERIENCES SECTION -->
+        <section id="experience" class="spaced-section bg-white border border-gray-100/50">
+          <div class="mx-auto lg:max-w-[var(--section-width)]">
+            <p class="section__title">experiences</p>
             <p class="section__sub-title">Work experiences</p>
             <ul id="experience__list" class="space-y-8"></ul>
           </div>
-          <!-- End Experiences section -->
         </section>
+        <!-- END EXPERIENCES SECTION-->
 
-        <!-- END SKILLS SECTION -->
+        <!-- PORTFOLIO SECTION -->
+        <section id="portfolio" class="spaced-section bg-[var(--primary-color)]/[0.02]">
+          <div class="mx-auto lg:max-w-[var(--section-width)]">
+            <p class="section__title">Portfolio</p>
+            <p class="section__sub-title">Recent projects</p>
+            <ul id="projects__list" class="grid grid-cols-1 md:grid-cols-2"></ul>
+          </div>
+        </section>
+        <!-- END PORTFOLIO SECTION-->
       </main>
       <!-- END MAINPART -->
     </div>
@@ -205,4 +218,3 @@
     <script src="./js/script.js" defer></script>
   </body>
 </html>
-, T
