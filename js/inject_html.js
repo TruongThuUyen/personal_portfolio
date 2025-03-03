@@ -1,5 +1,6 @@
 const experienceList = document.getElementById('experience__list');
 const skillsListEl = document.getElementById('skills__list');
+const projectsListEl = document.getElementById('projects__list');
 
 const skillsList = [
   {
@@ -187,14 +188,14 @@ const workExperienceList = [
     image: './assets/images/bap_logo.png',
     alt: 'BAP Software',
     companyName: 'BAP Software, HUE',
-    position: 'Frontend Developer',
+    position: 'Fresher Frontend Developer',
     timeStart: '03/2023',
     timeEnd: '07/2023',
     isCurrent: false,
     description: [
       {
         id: 1,
-        content: 'Phát triển giao diện người dùng và xử lý dữ liệu với RESTful APIs.',
+        content: 'Phát triển giao diện người dùng và xử lý dữ liệu với RESTful API.',
       },
       {
         id: 3,
@@ -303,6 +304,41 @@ const workExperienceList = [
         content: 'Cải thiện khả năng tự học và làm việc độc lập trong môi trường mới.',
       },
     ],
+  },
+];
+
+const projectsList = [
+  {
+    id: 1,
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQphO1iGa3a8wJpd43zAbREvXa8q4DmAIKww&s',
+    name: 'Personal portfilo',
+    description:
+      'A picture in your mind or an idea of how someone or something is: I have an image in my mind of how I want the garden to be.',
+  },
+  {
+    id: 2,
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQphO1iGa3a8wJpd43zAbREvXa8q4DmAIKww&s',
+    name: 'Media social',
+    description:
+      'A picture in your mind or an idea of how someone or something is: I have an image in my mind of how I want the garden to be.',
+  },
+  {
+    id: 3,
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQphO1iGa3a8wJpd43zAbREvXa8q4DmAIKww&s',
+    name: 'Clone Film Web',
+    description:
+      'A picture in your mind or an idea of how someone or something is: I have an image in my mind of how I want the garden to be.',
+  },
+  {
+    id: 4,
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQphO1iGa3a8wJpd43zAbREvXa8q4DmAIKww&s',
+    name: 'Clone UI shopee',
+    description:
+      'A picture in your mind or an idea of how someone or something is: I have an image in my mind of how I want the garden to be.',
   },
 ];
 
@@ -531,9 +567,8 @@ const renderExperiences = () => {
                 </div>
 
                 <!-- Expand/Collapse Button -->
-                <button
-                    class="show-item absolute right-1/2 top-[70px] rounded-full bg-gray-100 p-2 text-gray-500 hover:bg-gray-200 hover:text-gray-700">
-                    <svg
+                <button class="show-item absolute right-1/2 top-[70px] rounded-full bg-white p-2 text-[#1e3a8a] hover:bg-[#fad400]/5 border border-[#fad400]/20 hover:border-[#fad400]/40 shadow-sm transition-all duration-300">
+                  <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-6 w-6 transition-transform"
                     fill="none"
@@ -544,12 +579,39 @@ const renderExperiences = () => {
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M19 9l-7 7-7-7" />
-                    </svg>
+                  </svg>
                 </button>
               </li>`
     )
     .join('');
   experienceList.innerHTML = workExperienceHTML;
+};
+
+const renderProjects = () => {
+  projectsList.forEach((project) => {
+    projectsListEl.innerHTML += `
+     <li key=${project.id}
+        class="group bg-white shadow-sm border border-gray-100 hover:shadow-lg hover:border-[var(--primary-color)]/10 hover:cursor-pointer transition-all duration-300 md:hover:scale-90">
+        <div class="relative overflow-hidden">
+          <img
+            src="${project.image}"
+            alt="project image"
+            class="w-full h-[280px] md:h-[430px] object-cover" />
+          <!-- Overlay on hover -->
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-[var(--primary-color)]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+          <div class="absolute w-full bottom-4 left-0 z-10 p-6">
+            <h3 class="text-[12px] font-bold font-poppins uppercase text-white">
+              ${project.name}
+            </h3>
+            <p class="text-white">
+              ${project.description}
+            </p>
+          </div>
+        </div>
+      </li>`;
+  });
 };
 
 // Show all content in block
@@ -566,5 +628,6 @@ const addShowItemEvent = () => {
 document.addEventListener('DOMContentLoaded', () => {
   renderSkills();
   renderExperiences();
+  renderProjects();
   addShowItemEvent();
 });
